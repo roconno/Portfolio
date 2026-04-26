@@ -1,0 +1,469 @@
+/*	
+ Copyright 2014 Adobe Systems Incorporated.  All rights reserved. 
+
+Purpose- 
+Css for vmq bars
+*/
+@import 'styleTheme.css';
+@font-face {
+  font-family: 'source_sans_proregular';
+  src: url('../../Fonts/sourcesanspro-regular-webfont.eot');
+  src: url('../../Fonts/sourcesanspro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../../Fonts/sourcesanspro-regular-webfont.woff') format('woff'),
+       url('../../Fonts/sourcesanspro-regular-webfont.ttf') format('truetype'),
+       url('../../Fonts/sourcesanspro-regular-webfont.svg#source_sans_proregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+body {
+    margin: 0px;
+    overflow: hidden;
+    position:relative; 
+    width:100%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/*
+ * Resize handles
+ */
+.egrip,
+.wgrip
+{
+	display: none;
+    cursor:default;
+	float:right;
+    color:#000000;
+	left: 0px;
+	width: 4px;
+    height: 10px;
+    background-color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    opacity: 1;
+}
+
+.wgrip
+{
+	float:left;
+}
+
+.egrip:hover,
+.wgrip:hover
+{
+    opacity: 0.8;
+}
+
+/*
+ * Content css
+*/
+.contentrightmaxwidth,
+.contentrightminmaxwidth,
+.contentleftminwidth,
+.contentleftminmaxwidth
+{
+	font-family:'source_sans_proregular' !important;
+	font-size: 10px;
+    font-weight:300;
+	text-align: center;
+    vertical-align: middle;
+    color:#ffffff;
+    cursor: default;
+	left: 0px;
+    padding-left:4px;
+    padding-right:2px;
+    -webkit-transition: background-color 0.3s ease-in;
+    transition: background-color 0.3s ease-in;
+    margin-top: 0px;
+    height: 12px;
+}
+
+.contentrightmaxwidth,
+.contentrightminmaxwidth {
+    float: right;
+}
+
+.contentleftminwidth,
+.contentleftminmaxwidth
+{
+    float: left;
+}
+
+/*
+ * maxwidth row divs.
+ */
+.maxwidth {
+	background-color:#9bd239;
+	float: left;
+	height:12px;
+	opacity:1;
+    border: 1px solid #7eab2d;
+    position: absolute;
+    background-image: url("../images/maxarrows.png");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.maxwidth.activeMQ {
+    background-image: url("../images/maxarrowsactive.png");
+}
+
+/*
+ * max width hover state
+ */
+.maxwidth:hover {
+    border: 1px solid #7eab2d;
+    background-color: #9bd239;
+    background-image: url("../images/hover_max.svg");
+    background-repeat:repeat;
+    cursor:pointer;
+}
+
+.maxwidth:hover .contentrightmaxwidth {
+    display: block;
+    background-color:#7eab2d;
+    padding-left:4px;
+    padding-right:2px;
+    cursor:pointer;
+}
+
+.maxwidth:hover .egrip {
+    display: none;
+}
+
+/*
+ * max width selected state
+ */
+.maxwidthselected {
+	background-color:#5c7f1d;
+	float: left;
+	height:12px;
+	opacity:1;
+    position: absolute;
+    border: 1px solid #334a0a;
+    display: block;
+    background-image: url("../images/hover_max.svg");
+    background-repeat:repeat;
+}
+
+.maxwidthselected .egrip {
+    display: block;
+}
+
+.activeMQ .contentrightmaxwidth,
+.activeMQ:hover .contentrightmaxwidth,
+.maxwidthselected .contentrightmaxwidth
+{
+    background-color:#334a0a;
+}
+
+.maxwidthselected .contentrightmaxwidth {
+    display: block;
+    padding-left:4px;
+    padding-right:2px;
+    
+}
+/*
+ * minmax width row
+ */
+.minmaxwidth {
+    background-color:#31aed2;
+    float: left;
+	height:12px;
+	opacity:1;
+    border: 1px solid #278fad;
+    position: absolute;
+    background-image: url(../images/minmax_right.png), url(../images/minmax_left.png);
+    background-repeat: no-repeat;
+    background-position: left, right;
+}
+
+.minmaxwidth.activeMQ {
+    background-image: url(../images/minmaxactive_right.png), url(../images/minmaxactive_left.png);
+}
+
+/*
+ * minmax width row hover
+ */
+
+.minmaxwidth:hover {
+    border: 1px solid #278fad;
+    background-color: #31aed2;
+    background-image: url("../images/hover_minmax.svg");
+    background-repeat:repeat;
+    cursor:pointer;
+}
+
+.minmaxwidth:hover .contentleftminmaxwidth,
+.minmaxwidth:hover .contentrightminmaxwidth
+{
+    display: block;
+    background-color:#278fad;
+    padding-left:4px;
+    padding-right:2px;
+    cursor:pointer;
+}
+
+.minmaxwidth:hover .egrip,
+.minmaxwidth:hover .wgrip
+{
+    display: none;
+}
+
+/*
+ * minmax width row selected state
+ */
+.minmaxwidthselected {
+    background-color:#22687c;
+    float: left;
+	height:12px;
+	opacity:1;
+    position: absolute;
+    border: 1px solid #103e4b;
+    display: block;
+    background-image: url("../images/hover_minmax.svg");
+    background-repeat:repeat;
+    z-index: 10;
+}
+
+.minmaxwidthselected .egrip,
+.minmaxwidthselected .wgrip
+{
+    display: block;
+}
+
+.activeMQ .contentleftminmaxwidth,
+.activeMQ:hover .contentleftminmaxwidth,
+.activeMQ .contentrightminmaxwidth,
+.activeMQ:hover .contentrightminmaxwidth,
+.minmaxwidthselected .contentleftminmaxwidth,
+.minmaxwidthselected .contentrightminmaxwidth
+{
+    background-color:#103e4b;
+}
+
+
+.minmaxwidthselected .contentleftminmaxwidth,
+.minmaxwidthselected .contentrightminmaxwidth
+{
+    display: block;
+    padding-left:4px;
+    padding-right:2px;
+}
+
+/*
+ * minwidth rows
+ */
+.minwidth {
+    background-color:#7674c5;
+	float: left;
+	height:12px;
+    width:100%;
+	opacity:1;
+    border: 1px solid #4b4982;
+    position: absolute;
+    background-image: url("../images/minarrows.png");
+    background-repeat: no-repeat;
+    background-position: left;   
+}
+
+.minwidth.activeMQ {
+    background-image: url("../images/minarrowsactive.png");
+}
+
+/*
+ * minwidth row hover
+ */
+
+.minwidth:hover {
+    border: 1px solid #103e4b;
+    background-color: #7674c5;
+    background-image: url("../images/hover_min.svg");
+    background-repeat:repeat;
+    cursor:pointer;
+ 
+}
+
+.minwidth:hover .contentleftminwidth {
+    display: block;
+    background-color:#4b4982;
+    padding-left:4px;
+    padding-right:2px;
+    cursor:pointer;
+
+}
+
+.minwidth:hover .wgrip {
+    display: none;
+}
+/*
+ * minwidth rows selected state
+ */
+.minwidthselected {
+	background-color:#656498;
+    background-image: url("../images/hover_min.svg");
+    background-repeat:repeat;
+	float: left;
+	height:12px;
+    width:100%;
+	opacity:1;
+    border: 1px solid #272645;
+    position: absolute; 
+}
+
+.minwidthselected .wgrip
+{
+    display: block;
+}
+
+.activeMQ .contentleftminwidth,
+.activeMQ:hover .contentleftminwidth,
+.minwidthselected .contentleftminwidth
+{
+    background-color:#272645;
+}
+
+.minwidthselected .contentleftminwidth
+{
+    display: block;
+    padding-left:4px;
+    padding-right:2px;
+   
+}
+
+/*
+ * CSS corresponding to the three rows which will house the visual mqs.
+*/
+.vmqrows {
+	border: 1px solid;
+    border-radius: 1px;
+	height:14px;
+}
+
+.maxwidthrow {
+	left: 0px;
+}
+
+
+.rangerow {	
+}
+
+.minwidthrow {
+    border-bottom-style: solid;
+}
+
+/*
+ * Placeholder text which will be displayed when there are no MQs
+ */
+#nomqdiv {
+    border-bottom: 1px solid;
+	height:48px;
+    display:none;
+    vertical-align:middle;
+    text-decoration: none;
+}
+#nomqplusbutton {
+    width:18px;
+    height:15px;
+    vertical-align:text-bottom;
+}
+#nomqtextouter {
+    font-family: Tahoma, sans-serif;
+	font-size: 11px;
+	margin-top:12px;
+	line-height:20px;
+	vertical-align:middle;
+    letter-spacing:0.5;
+	padding-left: 8px;
+	padding-right: 8px;
+	float:left;
+    border-radius: 20px;
+    border: 2px solid transparent;
+}
+
+
+/*
+ * Guide related css
+*/
+#mqguide {
+    height: 65px;
+    z-index: 12;
+}
+
+div.vertical-line{
+  margin-left: 0px;
+  width: 1px; /* Line width */
+  float: left; 
+  position: fixed;
+}
+
+#plusButton {
+    position: fixed;
+    width: 19px;
+    height: 17px;
+    z-index: 14;
+    top: 48px;
+	background-repeat: no-repeat;
+    background-size: 34px 36px;
+    cursor:pointer;
+}
+
+.mqAddGuide {
+	width: 100%;
+    height: 16px;
+    z-index: 14;
+    position: absolute;
+    font-family:'source_sans_proregular' !important;
+	font-size: 11px;
+    display: none;
+    opacity: 1; 
+}
+
+.mqAddGuide:hover {
+    cursor: pointer;
+    width: 100%;
+}
+
+#minMaxMqAddGuide {
+    text-align: right;
+    background-color: #31aed2;
+}
+
+#maxMqAddGuide {
+    text-align: right;
+    background-color: #9bd239;
+}
+
+#minMqAddGuide {
+    text-align: left;
+    background-color: #7674c5;
+}
+
+.spanAddGuide {
+    height: 100%;
+    display: inline-block;
+    vertical-align: bottom;
+    padding-top: 2px;
+    line-height: normal;
+}
+
+#spanMinMaxMqAddGuide,
+#spanMaxMqAddGuide
+{
+    padding-right: 10px;
+}
+
+#spanMinMqAddGuide {
+    padding-left: 10px;
+}
+
+.contenteditableStyle {
+    outline: 2px solid #E0B96D;
+    margin-right: 2px;
+}
+
+.ui-resizable-e, .ui-resizable-w {
+    width: 15px;
+}

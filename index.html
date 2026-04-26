@@ -1,0 +1,97 @@
+<!--
+  File: index.html
+  Date: 2025-08-22
+  Student: O'Connor, Rhea-Racquel
+  Student Number: XXXXXXXXX
+  Course: CA-FWBDV
+  Notes: Final Project source file.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Home page for the Final Project website.">
+  <meta name="keywords" content="website, html5, css3, responsive, accessibility">
+  <title>Home — Final Project</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script defer src="assets/js/script.js"></script>
+
+  <meta property="og:title" content="Final Project Website">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_CA">
+  <meta property="og:description" content="Responsive, accessible site built with HTML5/CSS3.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Final Project Website">
+  <meta name="twitter:description" content="Responsive, accessible site built with HTML5/CSS3.">
+</head>
+<body>
+  <header role="banner" class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html" aria-label="Home">BrandName</a>
+      <nav role="navigation" class="site-nav" aria-label="Main Navigation">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">Menu</button>
+        <ul id="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+                  <li><a href="ecommerce.html">E‑Commerce</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main role="main" class="container">
+
+  <section class="hero">
+    <h1>Welcome to Our Site</h1>
+    <p>Professional, responsive, and accessible — built with HTML5 and CSS3.</p>
+  </section>
+  <section class="grid">
+    <article class="card">
+      <h2>Highlights</h2>
+      <ul>
+        <li>External CSS with no inline styles</li>
+        <li>Consistent navigation & banner area</li>
+        <li>Mobile-first responsive design</li>
+                <li><a href="ecommerce.html">E‑Commerce</a></li>
+        </ul>
+    </article>
+    <article class="card">
+      <h2>Comparison Table</h2>
+      <table>
+        <thead><tr><th>Plan</th><th>Price</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Basic</td><td>$9</td><td>Starter</td></tr>
+          <tr><td>Pro</td><td>$19</td><td>Popular</td></tr>
+          <tr><td>Enterprise</td><td>$49</td><td>Advanced</td></tr>
+        </tbody>
+      </table>
+    </article>
+    <article class="card">
+      <h2>Media</h2>
+      <p>Embedded YouTube video as required interactive media:</p>
+      <div class="video-wrapper">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+          clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </article>
+  </section>
+
+  </main>
+
+  <footer role="contentinfo" class="site-footer">
+    <div class="container">
+      <small>&copy; 2025 BrandName</small> • 
+      <a href="mailto:info@example.com">Email us</a> • 
+      <a href="https://developer.mozilla.org/" target="_blank" rel="noopener">External Resource</a>
+    </div>
+  </footer>
+</body>
+</html>
